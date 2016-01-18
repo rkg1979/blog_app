@@ -16,12 +16,12 @@
             <span class="icon-bar"></span>
       </button>
     <%=link_to "Blog App",root_path,class: "navbar-brand"%>
-    
+
  </div>
     <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="activ"><%= link_to "Authors,"#" %></li>
-        </ul>
+        <li class="activ"><%= link_to "Authors","#" %></li>
+      </ul>
       </div>
     </div>
   </nav>
@@ -29,8 +29,7 @@
     <% flash.each do |name,msg| %>
     <div class='alert alert-<%="#{name}"%>'>
       <a href='#' class='close' data-dismiss='alert' &#215;></a>
-      <%= content_tag :div, msg, :id =>"flash_#{name}"
-if msg.is_a?(String) %>
+      <%= content_tag :div, msg, :id =>"flash_#{name}" if msg.is_a?(String) %>
       </div>
     <% end %>
     <div class="row">
